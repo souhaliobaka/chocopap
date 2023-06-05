@@ -179,4 +179,44 @@ var produits=[
           "description": "Caramel Salé - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
           "ingredients": "Caramel au beurre salé avec un coeur en poudre chocolatée. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
       }
-  ]
+  ] 
+  var panier=[]
+  var price=produits[0].price; 
+  var listeproduit=document.getElementById("listproduit")
+  for (var i in produits)
+  { 
+    var toto=produits[i]
+    var title=toto.title
+    const elemt = document.createElement("p");
+    elemt.innerText = title;
+    // Append to body:
+    listeproduit.appendChild(elemt);
+
+    const prixElement = document.createElement("p");
+    prixElement.innerText =toto.price;
+    listeproduit.appendChild(prixElement);
+
+    const img = document.createElement("img");
+    img.src=toto.image
+    listeproduit.appendChild(img);
+
+
+
+
+    // mettre dans une variable le prix
+    // var elem= document.createElement
+    // inserer le prix dans le contenu de l'elément(elem.innerHTML ou innerText)
+    //  recupére un elemnet du dom avec document.getElementById()
+    // utiliser addElement pour ajouter elem a l'élément qu'on vient de recuperer
+    // 
+
+  }
+  function test() {
+    localStorage.setItem('bgcolor', 'red');
+    localStorage.setItem('font', 'Helvetica');
+    localStorage.setItem('image', 'myCat.png');
+  }
+  
+test()
+
+
